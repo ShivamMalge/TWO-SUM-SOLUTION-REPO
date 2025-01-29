@@ -87,23 +87,26 @@ public:
 
 ### JavaScript
 ```javascript
-class Solution {
-    twoSum(nums, target) {
-        let numIndices = new Map();
-        
-        for (let i = 0; i < nums.length; i++) {
-            let complement = target - nums[i];
-            
-            if (numIndices.has(complement)) {
-                return [numIndices.get(complement), i];
-            }
-            
-            numIndices.set(nums[i], i);
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let numIndices = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        let complement = target - nums[i];
+
+        if (numIndices.has(complement)) {
+            return [numIndices.get(complement), i];
         }
-        
-        return [];
+
+        numIndices.set(nums[i], i);
     }
-}
+
+    return [];
+};
 ```
 
 ## Example Walkthrough
