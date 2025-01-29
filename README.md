@@ -59,27 +59,25 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 
 ### C++
 ```cpp
-#include <vector>
-#include <unordered_map>
-using namespace std;
-
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> num_indices;
-        
+        unordered_map<int, int> numIndices;
+
         for (int i = 0; i < nums.size(); i++) {
             int complement = target - nums[i];
-            
-            if (num_indices.find(complement) != num_indices.end()) {
-                return {num_indices[complement], i};
+
+            if (numIndices.find(complement) != numIndices.end()) {
+                return {numIndices[complement], i};
             }
-            
-            num_indices[nums[i]] = i;
+
+            numIndices[nums[i]] = i;
         }
+
         return {};
     }
 };
+
 ```
 
 ### JavaScript
