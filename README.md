@@ -12,8 +12,6 @@ The optimal approach to solve this problem is by using a **hash map (dictionary)
 
 ### Python
 ```python
-from typing import List
-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_indices = {}
@@ -31,8 +29,6 @@ class Solution:
 
 ### C
 ```c
-#include <stdlib.h>
-
 int *twoSum(int *nums, int numsSize, int target, int *returnSize)
 {
     *returnSize = 2;
@@ -58,6 +54,7 @@ int *twoSum(int *nums, int numsSize, int target, int *returnSize)
     *returnSize = 0;
     return NULL;
 }
+
 ```
 
 ### C++
